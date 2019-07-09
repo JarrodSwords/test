@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[5.7.0, )"
             },
+            "system.data.sqlclient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.0, )"
@@ -122,6 +126,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "fluentvalidation": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "system.data.sqlclient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
             }
           },
           "imports": [
