@@ -45,7 +45,16 @@ namespace InterviewExercise.Test
         {
             var updateUserArgs = new UpsertUserArgs(id, "");
             Action updateUser = () => userManagementService.Update(updateUserArgs);
-            updateUser.Should().Throw<ValidationException>("*User with 'Id' \"1\" does nt exist*");
+            updateUser.Should().Throw<ValidationException>();
+        }
+
+        [Theory]
+        [InlineData(2, "Israel Kaʻanoʻi Kamakawiwoʻole")]
+        public void WhenUpdatingAUser_WithAnInvalidName_ItThrowsAValidationException(long id, string name)
+        {
+            var updateUserArgs = new UpsertUserArgs(id, name);
+            Action updateUser = () => userManagementService.Update(updateUserArgs);
+            updateUser.Should().Throw<ValidationException>();
         }
 
         [Theory]
