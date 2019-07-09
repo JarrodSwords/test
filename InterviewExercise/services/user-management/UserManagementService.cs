@@ -6,19 +6,23 @@ namespace InterviewExercise
 
     public class UserManagementService
     {
+        private readonly ICheckDatabaseAvailability databaseConnectionService;
         private readonly UpdateUserArgsValidator updateUserArgsValidator;
         private readonly IUserRepository userRepository;
 
         public UserManagementService(
+            ICheckDatabaseAvailability databaseConnectionService,
             UpdateUserArgsValidator updateUserArgsValidator,
             IUserRepository userRepository)
         {
+            this.databaseConnectionService = databaseConnectionService;
             this.updateUserArgsValidator = updateUserArgsValidator;
             this.userRepository = userRepository;
         }
 
         public User Update(UpsertUserArgs args)
         {
+            databaseConnectionService.CheckAvailability();
             updateUserArgsValidator.ValidateAndThrow(args);
 
             var user = userRepository.Find(args.Id);

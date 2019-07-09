@@ -8,34 +8,39 @@ namespace InterviewExercise.Test
 {
     public class UserManagementServiceTest
     {
-        private UserManagementService _userManagementService;
+        private UserManagementService userManagementService;
 
         public UserManagementServiceTest()
         {
             var userRepository = new MockUserRepository();
-            var updateUserArgsValidator = new UpdateUserArgsValidator(userRepository);
-            _userManagementService = new UserManagementService(updateUserArgsValidator, userRepository);
+            userManagementService = new UserManagementService(
+                new MockConnectionAvailableService(),
+                new UpdateUserArgsValidator(userRepository),
+                userRepository
+            );
         }
 
-        // [Theory]
-        // [InlineData("")]
-        // public void WhenUpdatingAUser_AndTheDatabaseCannotBeReached_ItThrowsASqlException()
-        // {
-        //     var updateUserArgs = new UpsertUserArgs(1, "John");
+        [Fact]
+        public void WhenUpdatingAUser_AndTheDatabaseCannotBeReached_ItThrowsASqlException()
+        {
+            var userRepository = new MockUserRepository();
+            userManagementService = new UserManagementService(
+                new MockConnectionUnavailableService(),
+                new UpdateUserArgsValidator(userRepository),
+                userRepository
+            );
 
-        //     Action updateUser = () => _userManagementService.Update(updateUserArgs);
-
-        //     updateUser.Should().Throw<SqlException>();
-        // }
+            var updateUserArgs = new UpsertUserArgs(1, "John");
+            Action updateUser = () => userManagementService.Update(updateUserArgs);
+            updateUser.Should().Throw<SqlException>();
+        }
 
         [Theory]
         [InlineData(-1)]
         public void WhenUpdatingAUser_ForAnInvalidId_ItThrowsAnArgumentException(long id)
         {
             var updateUserArgs = new UpsertUserArgs(id, "");
-
-            Action updateUser = () => _userManagementService.Update(updateUserArgs);
-
+            Action updateUser = () => userManagementService.Update(updateUserArgs);
             updateUser.Should().Throw<ValidationException>();
         }
 
@@ -45,9 +50,7 @@ namespace InterviewExercise.Test
         public void WhenUpdatingAUser_ItReturnsAnUpdatedUser(long id, string name)
         {
             var updateUserArgs = new UpsertUserArgs(id, name);
-
-            var user = _userManagementService.Update(updateUserArgs);
-
+            var user = userManagementService.Update(updateUserArgs);
             user.Name.Should().Be(name);
         }
     }
