@@ -13,15 +13,17 @@ namespace InterviewExercise.Test
 
         public void CheckAvailability()
         {
-            try
+            using(var connection = new SqlConnection(CONNECTION_STRING))
             {
-                var connection = new SqlConnection(CONNECTION_STRING);
-                connection.Open();
-            }
-            catch (SqlException)
-            {
-                // log
-                throw;
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException)
+                {
+                    // log
+                    throw;
+                }
             }
         }
     }

@@ -3,8 +3,12 @@ using FluentValidation;
 
 namespace InterviewExercise
 {
+    public interface IUserManagementService
+    {
+        User Update(UpsertUserArgs args);
+    }
 
-    public class UserManagementService
+    public class UserManagementService : IUserManagementService
     {
         private readonly ICheckDatabaseAvailability databaseConnectionService;
         private readonly UpdateUserArgsValidator updateUserArgsValidator;
