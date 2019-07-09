@@ -41,11 +41,11 @@ namespace InterviewExercise.Test
 
         [Theory]
         [InlineData(-1)]
-        public void WhenUpdatingAUser_ForAnInvalidId_ItThrowsAnArgumentException(long id)
+        public void WhenUpdatingAUser_ForAnInvalidId_ItThrowsAValidationException(long id)
         {
             var updateUserArgs = new UpsertUserArgs(id, "");
             Action updateUser = () => userManagementService.Update(updateUserArgs);
-            updateUser.Should().Throw<ValidationException>();
+            updateUser.Should().Throw<ValidationException>("*User with 'Id' \"1\" does nt exist*");
         }
 
         [Theory]

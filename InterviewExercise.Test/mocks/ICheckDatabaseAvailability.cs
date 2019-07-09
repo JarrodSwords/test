@@ -9,7 +9,7 @@ namespace InterviewExercise.Test
 
     public class MockConnectionUnavailableService : ICheckDatabaseAvailability
     {
-        const string CONNECTION_STRING = "Server=myServer;Database=myDataBase;User Id=myUsername;Password=myPassword;";
+        const string CONNECTION_STRING = "Server=myServer;Data Source=myDataBase;User Id=myUsername;Password=myPassword;Timeout=1;";
 
         public void CheckAvailability()
         {
