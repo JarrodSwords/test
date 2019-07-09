@@ -23,15 +23,19 @@ namespace InterviewExercise.Test
         [Fact]
         public void WhenUpdatingAUser_AndTheDatabaseCannotBeReached_ItThrowsASqlException()
         {
+            // arrange
+            var updateUserArgs = new UpsertUserArgs(1, "John");
             var userRepository = new MockUserRepository();
             userManagementService = new UserManagementService(
                 new MockConnectionUnavailableService(),
                 new UpdateUserArgsValidator(userRepository),
                 userRepository
-            );
+            );            
 
-            var updateUserArgs = new UpsertUserArgs(1, "John");
+            // act
             Action updateUser = () => userManagementService.Update(updateUserArgs);
+
+            // assert
             updateUser.Should().Throw<SqlException>();
         }
 
