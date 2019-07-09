@@ -22,7 +22,7 @@ namespace InterviewExercise
                 .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotEmpty()
                 .Must(x => userRepository.Exists(x))
-                .WithMessage("User with {PropertyName} '{PropertyValue}' does not exist");
+                .WithMessage("User with {PropertyName} '{PropertyValue}' does not exist.");
 
             RuleFor(x => x.Name)
                 .MaximumLength(20)
