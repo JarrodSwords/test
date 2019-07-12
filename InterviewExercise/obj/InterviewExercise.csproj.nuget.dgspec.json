@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {}
+    "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {}
   },
   "projects": {
-    "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
+    "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
+        "projectUniqueName": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
         "projectName": "InterviewExercise",
-        "projectPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
+        "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
         "packagesPath": "C:\\Users\\Jarrod\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise\\obj\\",
+        "outputPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
