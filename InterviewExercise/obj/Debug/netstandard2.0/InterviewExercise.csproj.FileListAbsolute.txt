@@ -1,0 +1,9 @@
+D:\git\practice\interview-exercise\InterviewExercise\bin\Debug\netstandard2.0\InterviewExercise.deps.json
+D:\git\practice\interview-exercise\InterviewExercise\bin\Debug\netstandard2.0\InterviewExercise.dll
+D:\git\practice\interview-exercise\InterviewExercise\bin\Debug\netstandard2.0\InterviewExercise.pdb
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.csprojAssemblyReference.cache
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.csproj.CoreCompileInputs.cache
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.AssemblyInfoInputs.cache
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.AssemblyInfo.cs
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.dll
+D:\git\practice\interview-exercise\InterviewExercise\obj\Debug\netstandard2.0\InterviewExercise.pdb
