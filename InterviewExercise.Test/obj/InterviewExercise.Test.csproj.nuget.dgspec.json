@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj": {}
+    "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj": {}
   },
   "projects": {
-    "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj": {
+    "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
+        "projectUniqueName": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
         "projectName": "InterviewExercise.Test",
-        "projectPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
+        "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
         "packagesPath": "C:\\Users\\Jarrod\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\obj\\",
+        "outputPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -31,7 +31,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
+                "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -53,6 +57,14 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "fluentassertions": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
+            "system.data.sqlclient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.0, )"
@@ -60,6 +72,68 @@
             "xunit.runner.visualstudio": {
               "target": "Package",
               "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
+        "projectName": "InterviewExercise",
+        "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj",
+        "packagesPath": "C:\\Users\\Jarrod\\.nuget\\packages\\",
+        "outputPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jarrod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "fluentvalidation": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "system.data.sqlclient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
             }
           },
           "imports": [
