@@ -6554,11 +6554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
+      "projectUniqueName": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
       "projectName": "InterviewExercise.Test",
-      "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
+      "projectPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\InterviewExercise.Test.csproj",
       "packagesPath": "C:\\Users\\Jarrod\\.nuget\\packages\\",
-      "outputPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\obj\\",
+      "outputPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -6579,8 +6579,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
-              "projectPath": "d:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj"
+            "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj": {
+              "projectPath": "D:\\git\\practice\\interview-exercise\\InterviewExercise\\InterviewExercise.csproj"
             }
           }
         }
